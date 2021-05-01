@@ -1,0 +1,207 @@
+.homepage {
+    margin: 20px 10%;
+}
+.banner {
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_left {
+    flex: 0.7;
+    text-align: justify;
+    margin-right: 40px;
+    color: #383838;
+}
+.banner_right {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+}
+.banner_right > img {
+    width: 400px;
+    animation: rotation 40s infinite linear;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+.homepage_title1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+.homepage_title2 {
+    font-size: 44px;
+    text-align: left;
+}
+.homepage_title3 {
+    font-size: 32px;
+    padding: 40px 0;
+}
+.homepage_title4 {
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .homepage {
+        margin: 30px 8%;
+    }
+    .banner {
+        margin: 40px 0;
+    }
+    .banner_left {
+        margin-right: 34px;
+    }
+    .homepage_title1 {
+        font-size: 37px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .homepage_title2 {
+        margin-top: 20px;
+        font-size: 39px;
+    }
+    .homepage_title3 {
+        font-size: 30px;
+    }
+    .homepage_title4 {
+        font-size: 26px;
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .homepage {
+        margin: 20px 5%;
+    }
+    .banner {
+        margin: 10px 0;
+    }
+    .homepage_title1 {
+        font-size: 40px;
+    }
+    .homepage_title2 {
+        margin-top: 20px;
+        font-size: 38px;
+    }
+    .homepage_title3 {
+        font-size: 27px;
+        text-align: left;
+    }
+    .homepage_title4 {
+        font-size: 24px;
+    }
+    
+}
+@media only screen and (max-width: 800px)  {
+    .homepage {
+        margin: 20px 5%;
+    }
+    .banner {
+        margin: 40px 0;
+    }
+    .banner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .banner_left {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+        color: #383838;
+    }
+    .banner_right {
+        display: flex;
+        justify-content: center;
+    }
+    .banner_right > img {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .homepage_title1 {
+        font-size: 48px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .homepage_title2 {
+        font-size: 44px;
+        text-align: left;
+    }
+    .homepage_title3 {
+        font-size: 32px;
+        padding: 40px 0;
+    }
+    .homepage_title4 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 500px)  {
+    .homepage {
+        margin: 20px 3%;
+    }
+    .banner_left {
+        margin: 10px 3%;
+    }
+    .banner_right {
+        display: flex;
+        justify-content: center;
+    }
+    .banner_right > img {
+        width: 300px;
+    }
+    .homepage_title1 {
+        font-size: 36px;
+    }
+    .homepage_title2 {
+        font-size: 38px;
+        text-align: left;
+    }
+    .homepage_title3 {
+        font-size: 28px;
+        text-align: justify;
+    }
+    .homepage_title4 {
+        font-size: 25px;
+    }
+}
+
+
+@media only screen and (max-width: 400px)  {
+    .homepage {
+        margin: 20px 3%;
+    }
+    .banner {
+        margin: 10px 0;
+    }
+    .banner_left {
+        margin: 10px 3%;
+    }
+    .banner_right > img {
+        width: 200px;
+    }
+    .homepage_title1 {
+        font-size: 26px;
+    }
+    .homepage_title2 {
+        font-size: 28px;
+        text-align: left;
+    }
+    .homepage_title3 {
+        font-size: 23px;
+        text-align: left;
+    }
+    .homepage_title4 {
+        font-size: 21px;
+        text-align: left;
+    }
+}

@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color:  #efefef;
+    font-size: 18px;
+}
+.gmail, .link, .love {
+    width: 25px;
+    margin: 0 5px;
+    margin-top: 3px;
+}
+.gmail:hover, .link:hover, .love:hover {
+    transform: translateY(-3px);
+}
+
+@media only screen and (max-width: 400px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        background-color:  #efefef;
+        font-size: 18px;
+        flex-direction: row;
+    }
+    .gmail, .link, .love {
+        width: 20px;
+        margin: 0 5px;
+        margin-top: 3px;
+    }
+    .gmail:hover, .link:hover, .love:hover {
+        transform: translateY(-3px);
+    }
+}
