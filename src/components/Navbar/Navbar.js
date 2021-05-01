@@ -1,9 +1,16 @@
 import React from 'react';
 import './Navbar.css';
 import Button from '@material-ui/core/Button';
-import Avatar from '@material-ui/core/Avatar';
+import { useHistory } from 'react-router-dom';
 
 function Navbar() {
+    
+    const history = useHistory();
+
+    const login = () => {
+        history.push("/feeds");
+    }
+
     return (
         <div className="nav">
             <div className="nav_left">
@@ -20,7 +27,7 @@ function Navbar() {
                 {/* <div>
                     <Button color="primary">Hi, Harshit!</Button>
                 </div> */}
-                <Button variant="contained" color="primary">
+                <Button onClick={login} variant="contained" color="primary">
                     Log In
                 </Button>
             </div>

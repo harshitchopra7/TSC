@@ -1,0 +1,34 @@
+.feedmid_main {
+    margin: 0 35px;
+    width: 90%;
+}
+.feedmid {
+    background-color: white;
+    border-radius: 10px;
+}
+.feedmid_top {
+    padding: 10px 0;
+}
+.feedmid_top_input  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feedmid_top_input > input {
+    margin: 5px 0;
+    width: 500px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.feedmid_top_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 40px;
+}
+.post_btn {
+    text-transform: capitalize;
+}

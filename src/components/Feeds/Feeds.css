@@ -1,0 +1,13 @@
+.feeds {
+    display: flex;
+    margin: 20px 10%;
+}
+.feeds_left {
+    flex: 0.2;
+}
+.feeds_mid {
+    flex: 0.6;
+}
+.feeds_right {
+    flex: 0.2;
+}
