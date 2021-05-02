@@ -5,13 +5,18 @@ import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet';
 import CreateIcon from '@material-ui/icons/Create';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../features/userSlice';
 
 function LeftMenu() {
+
+    const user = useSelector(selectUser);
+
     return (
         <div className="leftmenu">
             <div className="leftmenu_top">
-                <Avatar style={{width: '90px', height: '90px'}} />
-                <p>Harshit Chopra</p>
+                <Avatar src={user?.photoURL} style={{width: '90px', height: '90px'}} />
+                <p>{user?.displayName}</p>
             </div>
             <div className="leftmenu_mid">
                 <div className="leftmenu_mid_elements">

@@ -2,13 +2,39 @@ import React from 'react';
 import './Navbar.css';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { auth, provider } from '../../firebase';
+import { login, logout, selectUser } from '../features/userSlice';
 
 function Navbar() {
-    
+
+    const user = useSelector(selectUser);
+
+    const dispatch = useDispatch();
+
     const history = useHistory();
 
-    const login = () => {
+    const signIn = () => {
+        auth.signInWithPopup(provider)
+            .then(({ user }) => {
+                dispatch(login({
+                    displayName: user.displayName,
+                    email: user.email,
+                    photoUrl: user.photURL,
+                    uid: user.uid
+                }))
+            }).catch(error => alert(error.message));
+        alert("Successful");
+
         history.push("/feeds");
+    }
+
+    const signOut = () => {
+        auth.signOut().then(() => {
+            dispatch(logout())
+        })
+        history.push('/');
+        alert('Logged Out');
     }
 
     return (
@@ -24,12 +50,25 @@ function Navbar() {
                 </div>
             </div>
             <div className="nav_right">
-                {/* <div>
-                    <Button color="primary">Hi, Harshit!</Button>
-                </div> */}
-                <Button onClick={login} variant="contained" color="primary">
-                    Log In
-                </Button>
+                {(!user)
+                    ? (
+                        <Button onClick={signIn} variant="contained" color="primary">
+                            Log In
+                        </Button>
+                    )
+                    : (
+                        <div>
+                            <div>
+                                <Button color="primary">Hi, Harshit!</Button>
+                            </div>
+
+                            <Button onClick={signOut} variant="contained" color="primary">
+                                Log Out
+                            </Button>
+                        </div>
+                    )
+
+                }
             </div>
         </div>
     )
