@@ -1,3 +1,12 @@
+This is a student's college community project, made for helping college students. 
+
+Here the students can Ask for help, guide other students, buy books/stationary items, sell them to other needy students etc.
+
+It is live on - https://takshshila-tsc.web.app/
+
+Tech Stack used to build this website -
+Reactjs, Redux, JavaScript, Firebase, HTML, CSS.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
