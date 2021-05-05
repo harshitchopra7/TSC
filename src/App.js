@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { login, selectUser } from './components/features/userSlice';
 import { auth } from './firebase';
 import { useEffect } from 'react';
+import BuySellFeeds from './components/BuySellFeeds/BuySellFeeds';
 
 function App() {
 
@@ -39,10 +40,24 @@ function App() {
           <Footer />
         </Route>
     ) : (
-        <Route path="/feeds">
+      <>
+        <Route exact path='/'>
+          <Navbar />
+          <Homepage />
+          <Footer />
+        </Route>
+
+        <Route path="/ask-share">
           <Navbar />
           <Feeds />
         </Route>
+
+        <Route path="/buy-sell">
+          <Navbar />
+          <BuySellFeeds />
+        </Route>
+
+        </>
     )
 }
       </Router>

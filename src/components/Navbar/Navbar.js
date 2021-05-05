@@ -37,6 +37,10 @@ function Navbar() {
         alert('Logged Out');
     }
 
+    const redirectToHome = () => {
+        history.push("/ask-share");
+    }
+
     return (
         <div className="nav">
             <div className="nav_left">
@@ -57,9 +61,13 @@ function Navbar() {
                         </Button>
                     )
                     : (
-                        <div>
+                        <div className="name_logout">
                             <div>
-                                <Button color="primary">Hi, Harshit!</Button>
+                                <Button color="primary">Hi, {user.displayName}!</Button>
+                            </div>
+                            
+                            <div className="nav_name">
+                                <Button onClick={redirectToHome} color="primary">Home</Button>
                             </div>
 
                             <Button onClick={signOut} variant="contained" color="primary">

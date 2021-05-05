@@ -1,0 +1,19 @@
+.feedmid_top_btnn {
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+}
+.feedmid_top_btnn_left {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.feedmid_top_btnn_left:hover {
+    cursor: pointer;
+}
+.feedmid_top_btnn_left >p {
+    margin-left: 5px;
+}
+.feedmid_top_btnn_right {
+    margin-left: auto;
+}

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { selectUser } from '../features/userSlice';
 
 
-function SingleFeed() {
+function SingleFeed({ name, description }) {
 
     const user = useSelector(selectUser);
 
@@ -18,12 +18,10 @@ function SingleFeed() {
                 <p>{user.displayName}</p>
             </div>
             <div className="singlefeed_desc">
-                <p>s vdn dvsdd dbd fdd d f ff fd fd
-                s vdn dvsdd dbd fdd d f ff fd fd 
-                s vdn dvsdd dbd fdd d f ff fd fd 
-                s vdn dvsdd dbd fdd d f ff fd fd  </p>
-                s vdn dvsdd dbd fdd d f ff fd fd 
-                s vdn dvsdd dbd fdd d f ff fd fd 
+                <p>mkdsamfdmfmdafmdsfmdsfmskdfmmfdmfkdsmfdksmfdksmfdksmfdklsmfdksmfdslkfdsnfdsnfdjsnfdjlsdfls
+                    mmfdksmvdlksmdlmdslfkldsmfldksfmdsfdklsmfdls
+                    ndfslnfdnlfdnkldfnslnfdldfldfslfdsklnfdslk
+                </p>
             </div>
             <div className="singlefeed_icons">
                 <div className="like_icon">

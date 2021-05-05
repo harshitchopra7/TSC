@@ -27,4 +27,11 @@
 .rightmenu_add_desc {
     margin-top: 10px;
     line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #383838;
+}
+.rightmenu_add_desc > span {
+    margin-left: 10px;
 }

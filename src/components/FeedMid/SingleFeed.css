@@ -3,6 +3,7 @@
     margin: 10px 0;
     border-radius: 10px;
     padding: 10px 20px;
+    width: 580px;
 }
 .singlefeed_name {
     display: flex;
@@ -15,6 +16,7 @@
 .singlefeed_desc {
     margin-top: 10px;
     padding: 10px 0;
+    word-wrap:break-word;
 }
 .singlefeed_icons {
     display: flex;

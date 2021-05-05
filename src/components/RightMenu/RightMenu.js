@@ -1,5 +1,6 @@
 import React from 'react';
 import './RightMenu.css';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 function RightMenu() {
     return (
@@ -14,7 +15,7 @@ function RightMenu() {
             </div>
             <div className="rightmenu_mid">
                 <p className="rightmenu_add">Phone : </p>
-                <p className="rightmenu_add_desc">076124 41352</p>
+                <a href="tel:076124 41352" className="rightmenu_add_desc"><PhoneIcon style={{color: '#3f51b5'}} /><span> 076124 41352</span></a>
             </div>
         </div>
     )
