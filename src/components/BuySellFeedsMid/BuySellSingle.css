@@ -37,6 +37,65 @@
 }
 .bs_right > img {
     width: 100%;
-    height: 150px;
+    height: 120px;
     border-radius: 10px;
+}
+.sell_btn {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sell_btn >p {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Popup */
+#popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 60vh;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.30);
+    background-color: white;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 10px;
+}
+#popup.active {
+    top: 50%;
+    visibility: visible;
+    background-color: #b8c6db;
+    background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    opacity: 1;
+    transition: 0.5s;
+}
+.feedmid_mid#blur.active {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+.sell_btn#blurr.active{
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+.cross {
+    font-size: 40px;
+    text-align: right;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+.cross:hover {
+    cursor: pointer;
 }

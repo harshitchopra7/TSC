@@ -15,9 +15,27 @@ function FeedMid() {
   const [input, setInput] = useState('');
   const [posts, setPosts] = useState([]);
 
-  const post = (e) => {
+  useEffect(() => {
+    db.collection('posts').orderBy('timestamp', 'desc')
+    .onSnapshot((snapshot) => (
+      setPosts(snapshot.docs.map(doc => (
+        {
+          key: doc.id,
+          data: doc.data()
+        }
+      )))
+    ))
+  }, [])
+
+  const sendPost = (e) => {
     e.preventDefault();    
- 
+
+    db.collection('posts').add({
+      name: user.displayName,
+      message: input,
+      photoUrl: user.photoURL,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
     setInput('');
 
   }
@@ -38,7 +56,7 @@ function FeedMid() {
                 <Button type="submit" className="post_btn" 
                   variant="contained" 
                   color="primary"
-              
+                  onClick={sendPost}
                 >
                     Post
                 </Button>
@@ -48,10 +66,15 @@ function FeedMid() {
         </div>
         <div className="feedmid_mid">
 
-          <SingleFeed />
-          <SingleFeed />
-          <SingleFeed />
-          <SingleFeed />
+          {posts.map(({ id, data:{ name, message, photoUrl }}) => (
+            <SingleFeed 
+              key={id}
+              name={name}
+              message={message}
+              photo={photoUrl}
+            />
+          ))}
+
         </div>
       </div>
     )

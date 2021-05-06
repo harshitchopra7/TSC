@@ -26,7 +26,7 @@ function Navbar() {
             }).catch(error => alert(error.message));
         alert("Successful");
 
-        history.push("/feeds");
+        history.push("/ask-share");
     }
 
     const signOut = () => {

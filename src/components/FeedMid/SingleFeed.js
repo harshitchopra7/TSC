@@ -7,21 +7,18 @@ import { useSelector } from 'react-redux';
 import { selectUser } from '../features/userSlice';
 
 
-function SingleFeed({ name, description }) {
+function SingleFeed({ name, message, photo }) {
 
     const user = useSelector(selectUser);
 
     return (
         <div className="singlefeed">
             <div className="singlefeed_name">
-                <Avatar src={user.photoURL} />
-                <p>{user.displayName}</p>
+                <Avatar src={photo} />
+                <p>{name}</p>
             </div>
             <div className="singlefeed_desc">
-                <p>mkdsamfdmfmdafmdsfmdsfmskdfmmfdmfkdsmfdksmfdksmfdksmfdklsmfdksmfdslkfdsnfdsnfdjsnfdjlsdfls
-                    mmfdksmvdlksmdlmdslfkldsmfldksfmdsfdklsmfdls
-                    ndfslnfdnlfdnkldfnslnfdldfldfslfdsklnfdslk
-                </p>
+                <p>{message}</p>
             </div>
             <div className="singlefeed_icons">
                 <div className="like_icon">
