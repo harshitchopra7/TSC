@@ -24,7 +24,7 @@ function Navbar() {
                     uid: user.uid
                 }))
             }).catch(error => alert(error.message));
-        alert("Successful");
+        // alert("Successful");
 
         history.push("/ask-share");
     }
@@ -34,7 +34,7 @@ function Navbar() {
             dispatch(logout())
         })
         history.push('/');
-        alert('Logged Out');
+        // alert('Logged Out');
     }
 
     const redirectToHome = () => {

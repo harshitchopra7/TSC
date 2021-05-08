@@ -7,13 +7,25 @@ import Feeds from './components/Feeds/Feeds';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, selectUser } from './components/features/userSlice';
 import { auth } from './firebase';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BuySellFeeds from './components/BuySellFeeds/BuySellFeeds';
+import styled, { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme, GlobalStyles } from './theme';
 
 function App() {
 
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+
+  // const StyledApp = styled.div`
+  // `
+
+  // const [darkMode, setDarkMode] = useState(true);
+
+  // const themeToggler = () => {
+  //     theme === "light" ? setTheme("dark") : setTheme("light");
+  // }
+
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
@@ -28,9 +40,9 @@ function App() {
   }, [])
 
   return (
-
+    // <ThemeProvider theme = {theme === "light" ? lightTheme : darkTheme}>
     
-
+    // <GlobalStyles />
     <div className="App">
       <Router>
       {(!user) ? (
@@ -63,7 +75,7 @@ function App() {
       </Router>
      
     </div>
-    
+    // </ThemeProvider>
   );
 }
 

@@ -46,6 +46,8 @@ function BuySellFeedsMid() {
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
 
+    toggle();
+
     setItemName('');
     setItemDesc('');
     setItemPrice('');
