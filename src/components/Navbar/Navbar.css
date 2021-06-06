@@ -51,5 +51,8 @@
     .nav_left_right > p {
         font-size: 10px;
     }
+    .nav_right {
+        display: none;
+    }
     
 }

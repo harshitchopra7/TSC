@@ -11,3 +11,22 @@
 .feeds_right {
     flex: 0.2;
 }
+
+@media only screen and (max-width: 1200px) {
+    .feeds {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px 2%;
+    }
+    .feeds_mid {
+        flex: 1;
+    }
+    .feeds_left {
+        display: none;
+    }
+    .feeds_right {
+        display: none;
+    }
+}

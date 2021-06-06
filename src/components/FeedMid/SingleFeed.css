@@ -39,3 +39,9 @@
 .like_comment:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 750px) {
+    .singlefeed {
+        width: 80vw;
+    }
+}
