@@ -9,8 +9,6 @@ import { login, selectUser } from './components/features/userSlice';
 import { auth } from './firebase';
 import { useEffect, useState } from 'react';
 import BuySellFeeds from './components/BuySellFeeds/BuySellFeeds';
-import styled, { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme, GlobalStyles } from './theme';
 
 function App() {
 
@@ -70,8 +68,8 @@ function App() {
         </Route>
 
         </>
-    )
-}
+     )
+} 
       </Router>
      
     </div>
