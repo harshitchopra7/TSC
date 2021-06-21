@@ -24,12 +24,12 @@ function LeftMenu() {
 
     return (
         <div className="leftmenu">
-            <div className="leftmenu_top">
+            {/* <div className="leftmenu_top">
                 <Avatar src={user?.photoURL} style={{width: '90px', height: '90px'}} >
                     {user?.displayName[0]}
                 </Avatar>
                 <p>{user?.displayName}</p>
-            </div>
+            </div> */}
             <div className="leftmenu_mid">
                 <div className="leftmenu_mid_elements" onClick={askshare}>
                     <CreateIcon className="leftmenu_icon_color" />

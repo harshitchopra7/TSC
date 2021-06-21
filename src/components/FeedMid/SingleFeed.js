@@ -13,10 +13,10 @@ function SingleFeed({ name, message, photo }) {
 
     return (
         <div className="singlefeed">
-            <div className="singlefeed_name">
+            {/* <div className="singlefeed_name">
                 <Avatar src={photo} />
                 <p>{name}</p>
-            </div>
+            </div> */}
             <div className="singlefeed_desc">
                 <p>{message}</p>
             </div>

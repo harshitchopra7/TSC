@@ -43,13 +43,13 @@ function App() {
     // <GlobalStyles />
     <div className="App">
       <Router>
-      {(!user) ? (
+      {/* {(!user) ? ( */}
         <Route exact path='/'>
           <Navbar />
           <Homepage />
           <Footer />
         </Route>
-    ) : (
+    {/* ) : ( */}
       <>
         <Route exact path='/'>
           <Navbar />
@@ -68,8 +68,8 @@ function App() {
         </Route>
 
         </>
-     )
-} 
+     {/* )
+}  */}
       </Router>
      
     </div>

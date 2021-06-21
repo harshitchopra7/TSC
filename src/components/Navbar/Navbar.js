@@ -63,7 +63,7 @@ function Navbar() {
                     : (
                         <div className="name_logout">
                             <div>
-                                <Button color="primary">Hi, {user.displayName}!</Button>
+                                {/* <Button color="primary">Hi, {user.displayName}!</Button> */}
                             </div>
                             
                             <div className="nav_name">

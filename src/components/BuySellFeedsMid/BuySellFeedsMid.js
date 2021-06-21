@@ -84,6 +84,7 @@ function BuySellFeedsMid() {
               </div>
               <div className="feedmid_top_input">
                   <input  
+                    className="itemname_input"
                     placeholder="Item Name"
                     value={itemName}
                     onChange={(e) => setItemName(e.target.value)}
@@ -91,6 +92,7 @@ function BuySellFeedsMid() {
               </div>
               <div className="feedmid_top_input">
                   <input  
+                    className="itemdesc_input"
                     placeholder="Item Description"
                     value={itemDesc}
                     onChange={(e) => setItemDesc(e.target.value)}
@@ -98,6 +100,7 @@ function BuySellFeedsMid() {
               </div>
               <div className="feedmid_top_input">
                   <input  
+                    className="itemprice_input"
                     placeholder="Item Price"
                     value={itemPrice}
                     onChange={(e) => setItemPrice(e.target.value)}
@@ -105,6 +108,7 @@ function BuySellFeedsMid() {
               </div>
               <div className="feedmid_top_input">
                   <input  
+                    className="itemphone_input"
                     placeholder="Your phone number"
                     value={userPhone}
                     onChange={(e) => setUserPhone(e.target.value)}
@@ -112,6 +116,7 @@ function BuySellFeedsMid() {
               </div>
               <div className="feedmid_top_input">
                   <input 
+                    className="itemimage_input"
                     placeholder="Enter image URL"
                     value={itemImage}
                     onChange={(e) => setItemImage(e.target.value)}
