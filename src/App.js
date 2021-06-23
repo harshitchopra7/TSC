@@ -51,11 +51,11 @@ function App() {
         </Route>
     {/* ) : ( */}
       <>
-        <Route exact path='/'>
+        {/* <Route exact path='/'>
           <Navbar />
           <Homepage />
           <Footer />
-        </Route>
+        </Route> */}
 
         <Route path="/ask-share">
           <Navbar />
