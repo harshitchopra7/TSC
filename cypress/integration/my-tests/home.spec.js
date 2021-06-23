@@ -3,7 +3,7 @@
 import { home, askShare, buySell } from './urls';
 
 describe('Homepage Tests', () => {
-    var x = () => {
+    var homeTests = () => {
         it('Homepage should be visible', () => {
             cy.get('div.homepage').should('be.visible')
         })
@@ -38,7 +38,7 @@ describe('Homepage Tests', () => {
             cy.visit(home)
             cy.viewport(1440, 900)
         })
-        x();
+        homeTests();
     })
 
     context('Mobile Tests', () => {
@@ -46,7 +46,7 @@ describe('Homepage Tests', () => {
             cy.visit(home)
             cy.viewport('iphone-xr')
         })
-        x();
+        homeTests();
     })
 
 })

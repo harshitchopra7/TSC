@@ -45,5 +45,8 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.7",
     "cypress": "^7.5.0"
+  },
+  "nyc": {
+    "exclude": "src/reportWebVitals.js"
   }
 }
